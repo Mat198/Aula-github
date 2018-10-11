@@ -1,0 +1,18 @@
+
+	Org	0h
+	Ajmp	inicio
+	Org	30h
+
+incio:	
+	Mov A,#34d
+	MOV P0,A
+	JB	P1.1,inico
+	ACALL	FX
+	AJMP	$
+
+FX:	CLR	P1.0
+	SETB	P2.2
+	MOV 	R0,#3h
+	RET
+
+END
